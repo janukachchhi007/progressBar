@@ -11,14 +11,20 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var progressbar: UIProgressView!
     
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var silder: UISlider!
     @IBOutlet weak var playButton: UIButton!
     var time = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         progressbar.progress = 0.0
 
     }
     
+    @IBAction func silderAction(_ sender: UISlider) {
+        label1.text = String(Int(silder.value))
+    }
     @IBAction func playButtonaction(_ sender: UIButton) {
         
         

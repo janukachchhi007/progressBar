@@ -23,11 +23,32 @@
                                     <constraint firstAttribute="width" constant="374" id="K2K-YG-s3q"/>
                                 </constraints>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Me-06-xRL">
-                                <rect key="frame" x="146" y="523" width="135" height="41"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="oUz-70-6PV">
+                                <rect key="frame" x="18" y="209" width="378" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="V15-uW-zvF"/>
-                                    <constraint firstAttribute="width" constant="135" id="vh6-qK-iqt"/>
+                                    <constraint firstAttribute="width" constant="374" id="bLV-qv-aqa"/>
+                                    <constraint firstAttribute="height" constant="29" id="qtS-nx-hC9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="silderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="WRq-eE-ei2"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdw-YU-fBx">
+                                <rect key="frame" x="165" y="243" width="86" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="FEl-QH-d7z"/>
+                                    <constraint firstAttribute="width" constant="86" id="K2M-42-akD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Me-06-xRL">
+                                <rect key="frame" x="147" y="511" width="123" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="4RF-PG-9UH"/>
+                                    <constraint firstAttribute="width" constant="123" id="IcD-IH-MVK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Play">
@@ -42,18 +63,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Vdw-YU-fBx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="6P1-V4-Caq"/>
                             <constraint firstItem="hr0-XB-izM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="230" id="8cJ-2j-oIO"/>
-                            <constraint firstItem="5Me-06-xRL" firstAttribute="top" secondItem="hr0-XB-izM" secondAttribute="bottom" constant="201" id="KsF-fl-fdE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Me-06-xRL" secondAttribute="trailing" constant="133" id="WLH-RK-0Or"/>
-                            <constraint firstItem="5Me-06-xRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="a8V-7N-9g6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vdw-YU-fBx" secondAttribute="trailing" constant="163" id="Cxv-Ex-Gk9"/>
+                            <constraint firstItem="5Me-06-xRL" firstAttribute="top" secondItem="hr0-XB-izM" secondAttribute="bottom" constant="189" id="Dqq-t9-nCQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Me-06-xRL" secondAttribute="trailing" constant="144" id="LD5-eR-KGs"/>
+                            <constraint firstItem="5Me-06-xRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="Zzy-iQ-yea"/>
+                            <constraint firstItem="Vdw-YU-fBx" firstAttribute="top" secondItem="oUz-70-6PV" secondAttribute="bottom" constant="5" id="c9t-7d-lUX"/>
+                            <constraint firstItem="oUz-70-6PV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dLu-b0-lsI"/>
                             <constraint firstItem="hr0-XB-izM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ePN-dd-M9g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUz-70-6PV" secondAttribute="trailing" constant="20" id="n3K-uQ-svO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hr0-XB-izM" secondAttribute="trailing" constant="20" id="qwF-0o-yx4"/>
+                            <constraint firstItem="oUz-70-6PV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="vSA-nX-2IK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CSD-yz-DhU"/>
                     <connections>
+                        <outlet property="label1" destination="Vdw-YU-fBx" id="9pq-DX-OZ8"/>
                         <outlet property="playButton" destination="5Me-06-xRL" id="ZJI-4M-5Sv"/>
                         <outlet property="progressbar" destination="hr0-XB-izM" id="xNR-W3-2tL"/>
+                        <outlet property="silder" destination="oUz-70-6PV" id="prx-67-fzw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
